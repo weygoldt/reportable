@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "reportable"
+version = "0.1.0"
+description = "A tool to make reports, slides and posters written in markup languages such as markdown, latex or quarto portable."
+authors = ["weygoldt <88969563+weygoldt@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = {extras = ["all"], version = "^0.12.5"}
+markdown2 = "^2.5.0"
+pyyaml = "^6.0.2"
+rich = "^13.8.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+reportable = "reportable.main:app"
