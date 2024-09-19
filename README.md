@@ -17,11 +17,22 @@ bad habits.
 
 ## What does `reportable` do?
 
-1. It parses the report file and finds all the files that are linked in the report.
-2. It copies all the linked files to a new directory.
-3. It changes the links in the report to point to the new directory.
-4. It writes a new report file with the new links into the new directory.
+If you install the package and run the following:
+
+```bash
+reportable /path/to/report.qmd /path/to/new/directory
+```
+
+1. It parses the `report.qmd` file and finds all the files that are linked in the report.
+2. It copies all the linked files to `/path/to/new/directory/assets`.
+3. It changes the links in the report to point to the new directory in a relative manner.
+4. It writes a new report file with the new links into the new directory `/path/to/new/directory/slides.qmd`.
 5. It executes the needed commands to compile the report.
 
 Voilà! You have a portable report. This is particularly useful when you give
 presentations on conferences using Quarto.
+
+## What does `reportable` not do?
+
+- [ ] Work on anythin except Quarto (for now).
+- [ ] Work on nested files. I.e., when you use seperate files for seperate chapters in your reports.
