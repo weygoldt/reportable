@@ -22,7 +22,7 @@ QUARTO_PATTERN = re.compile(
 )
 
 # Supported file extensions for media
-SUPPORTED_EXTENSIONS = [".png", ".jpg", ".jpeg", ".gif", ".svg", ".mp4", ".mp3", ".wav"]
+SUPPORTED_EXTENSIONS = [".png", ".jpg", ".jpeg", ".gif", ".svg", ".mp4", ".mp3", ".wav", ".mov"]
 
 
 def find_latex_media(content: str):
